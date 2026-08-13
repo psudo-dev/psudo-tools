@@ -7,7 +7,7 @@ const folderName = path.basename(process.cwd());
 const exerciseFile = `${folderName}.ts`;
 
 if (!fs.existsSync(`./${exerciseFile}`)) {
-	console.error(`❎ ${exerciseFile} file not found`);
+	console.error(`\n❎ ${exerciseFile} file not found`);
 	process.exit(1);
 }
 
