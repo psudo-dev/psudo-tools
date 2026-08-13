@@ -6,7 +6,7 @@ export function installTest(exercisePath: string): void {
 	});
 
 	if (install.exitCode !== 0) {
-		console.error("❎ exercism test installation has failed");
+		console.error("\n❎ exercism test installation has failed");
 		process.exit(1);
 	}
 }

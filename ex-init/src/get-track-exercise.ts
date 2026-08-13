@@ -11,7 +11,7 @@ export function getTrackExercise(args: string[]): {
 	}
 
 	if (!track || !exercise) {
-		console.error("❎ --track and --exercise are required");
+		console.error("\n❎ --track and --exercise are required");
 		process.exit(1);
 	}
 

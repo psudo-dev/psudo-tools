@@ -5,7 +5,7 @@ export function downloadExercise(args: string[], exercise: string): void {
 	});
 
 	if (download.exitCode !== 0) {
-		console.error(`❎ ${exercise} download has failed`);
+		console.error(`\n❎ ${exercise} download has failed`);
 		process.exit(1);
 	}
 }
