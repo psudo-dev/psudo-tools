@@ -11,7 +11,7 @@ if (!fs.existsSync(`./${exerciseFile}`)) {
 	process.exit(1);
 }
 
-console.log(`\n🚧 running tests: ${exerciseFile} \n`);
+console.log(`\n🚧 running tests: ${exerciseFile}\n`);
 
 const submit = Bun.spawnSync(["corepack", "yarn", "test"], {
 	stdio: ["inherit", "inherit", "inherit"],
