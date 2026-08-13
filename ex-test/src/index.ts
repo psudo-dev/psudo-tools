@@ -13,11 +13,11 @@ if (!fs.existsSync(`./${exerciseFile}`)) {
 
 console.log(`\n🚧 running tests: ${exerciseFile}\n`);
 
-const submit = Bun.spawnSync(["corepack", "yarn", "test"], {
+const test = Bun.spawnSync(["corepack", "yarn", "test"], {
 	stdio: ["inherit", "inherit", "inherit"],
 });
 
-if (submit.exitCode !== 0) {
+if (test.exitCode !== 0) {
 	console.error("\n❎ test command has failed!");
 	process.exit(1);
 }
