@@ -23,7 +23,7 @@ I don't know yet what any of this will grow into long-term — for now, it's jus
 
 ## Tools
 
-### Frontend Mentor Init
+### Frontend Mentor Setup
 
 Sets up a new [Frontend Mentor](https://www.frontendmentor.io) challenge.
 
@@ -41,7 +41,7 @@ Sets up a new [Frontend Mentor](https://www.frontendmentor.io) challenge.
 fm-init <challenge-difficulty> <challenge-page-url>
 ```
 
-### Exercism Init
+### Exercism Setup
 
 You copy & paste the command from the [Exercism](https://exercism.org) TypeScript exercise, `ex-init` command will download the exercise, install the test dependencies, open VS Code with the exercise, test file and README, and make the `initial commit`.
 
