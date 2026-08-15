@@ -3,7 +3,7 @@ export function gitCommands(
 	track: string,
 	exercise: string,
 ): void {
-	console.log(`\n🏷️  initial Commit: exercism/${track}/${exercise}\n`);
+	console.log(`\n🏷️  initial commit: exercism/${track}/${exercise}\n`);
 	const gitAdd = Bun.spawnSync(["git", "add", "."], {
 		cwd: exercisePath,
 		stdio: ["inherit", "inherit", "inherit"],
