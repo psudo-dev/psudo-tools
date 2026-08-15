@@ -1,3 +1,5 @@
+## Overview
+
 A collection of small local CLI tools I built to automate repetitive parts of my workflow.
 
 ## Motivation
