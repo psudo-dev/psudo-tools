@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "fs";
 import { BadgeConfig, Difficulty, Stack } from "./types";
-import { difficulties, folders, stacks } from "./project-variables";
+import { difficulties, folders, stacks } from "./constants";
 
 export function capitalize(word: string): string {
 	return word.charAt(0).toUpperCase() + word.slice(1);

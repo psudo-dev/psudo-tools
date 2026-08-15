@@ -2,12 +2,12 @@ import fs from "fs";
 import { footerHtml, linkCSSToHtml } from "./templates-static";
 
 export function getChallengeInstructions(): string {
-	console.log("✏️  parsing challenge instructions to README.md...");
-
 	if (!fs.existsSync("./.frontend-mentor/README.md")) {
 		console.error("\n❎ couldn't find /.frontend-mentor/README.md");
 		process.exit(1);
 	}
+
+	console.log("✏️  parsing challenge instructions to README.md...");
 
 	const readmeTemp = fs.readFileSync("./.frontend-mentor/README.md", "utf-8");
 

@@ -18,10 +18,10 @@ export const tsconfig = `
 `;
 
 export const viteConfig = `
-	import { defineConfig } from "vite";
+import { defineConfig } from "vite";
 
-	export default defineConfig({});
-	`;
+export default defineConfig({});
+`;
 
 export const packageScripts = {
 	gitreset: "git reset --hard && git clean -fd",
@@ -31,8 +31,8 @@ export const packageScripts = {
 };
 
 export const indexTS = `
-	import "../css/index.css";
-	`;
+import "../css/index.css";
+`;
 
 export const indexCSS = `
 @import "./variables.css";

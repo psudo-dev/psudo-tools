@@ -13,7 +13,7 @@ import {
 import { writeCSS, writeIndexHtml, writeReadme } from "./write-files";
 import { formatFiles } from "./format-files";
 
-// gitCommands("initial commit");
+gitCommands("initial commit");
 installDependencies();
 createFolders();
 moveFiles();
@@ -25,6 +25,6 @@ writeIndexHtml();
 writeCSS();
 writeReadme();
 formatFiles();
-// gitCommands("initial setup");
+gitCommands("initial setup");
 
 console.log(`\n✅ setup completed!`);

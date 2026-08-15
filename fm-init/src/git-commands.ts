@@ -1,7 +1,7 @@
 import { projectNameLowerCase } from "./project-variables";
 
 export function gitCommands(message: string): void {
-	console.log(`\n🏷️  ${message}: ${projectNameLowerCase}\n`);
+	console.log(`\n🏷️  [GIT] ${projectNameLowerCase}: ${message}\n`);
 	const gitAdd = Bun.spawnSync(["git", "add", "."], {
 		stdio: ["inherit", "inherit", "inherit"],
 	});
@@ -12,7 +12,7 @@ export function gitCommands(message: string): void {
 	}
 
 	const gitCommit = Bun.spawnSync(
-		["git", "commit", "-m", `${message}: ${projectNameLowerCase}`],
+		["git", "commit", "-m", `${projectNameLowerCase}: ${message}`],
 		{ stdio: ["inherit", "inherit", "inherit"] },
 	);
 
