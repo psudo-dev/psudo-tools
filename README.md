@@ -21,7 +21,7 @@ I don't know yet what any of this will grow into long-term — for now, it's jus
 
 ## Tools
 
-### fm-init
+### Frontend Mentor Init
 
 Sets up a new [Frontend Mentor](https://www.frontendmentor.io) challenge.
 
