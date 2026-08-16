@@ -59,7 +59,7 @@ fm-init <challenge-difficulty> <challenge-page-url>
 
 #### Frontend Mentor Update
 
-Each Frontend Mentor project has its own repository and I keep them all organized under the [`frontend-mentor`](https://github.com/psudo-dev/frontend-mentor) repository. This tool updates the `frontend-mentor/README.md` file with the latest project badges and links it to the project repository.
+Each Frontend Mentor project has its own repository and I keep them all organized under the `frontend-mentor` repository. This tool updates the `frontend-mentor/README.md` file with the latest project badges and links it to the project repository.
 
 ```bash
 cd <project-folder>
