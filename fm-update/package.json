@@ -1,0 +1,15 @@
+{
+	"name": "fm-update",
+	"version": "1.0.0",
+	"type": "module",
+	"bin": {
+		"fm-update": "./src/index.ts"
+	},
+	"devDependencies": {
+		"bun-types": "latest",
+		"typescript": "^5.0.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
+}

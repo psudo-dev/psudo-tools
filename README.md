@@ -21,50 +21,6 @@ I don't know yet what any of this will grow into long-term — for now, it's jus
 - [Bun](https://bun.sh)
 - [Node.js](https://nodejs.org)
 
-## Tools
-
-### Frontend Mentor Setup
-
-Sets up a new [Frontend Mentor](https://www.frontendmentor.io) challenge.
-
-- sets up `Bun`, `Vite` and `TypeScript`
-- installs dependencies
-- creates folders and moves `.md` files
-- edits and writes `tsconfig.json`, `vite.config.ts`, `package.json` and `.prettierignore`
-- creates `index.css`, `reset.css`, `utilities.css` and `variables.css` with Color Variables extracted from the `style-guide.md`
-- cleans up `index.html`, links `index.css` and `index.ts` files
-- creates `README.md` with the challenge description and badges
-- formats all files with `prettier` and `beautify`
-- runs `git` commands
-
-```bash
-fm-init <challenge-difficulty> <challenge-page-url>
-```
-
-### Exercism Setup
-
-You copy & paste the command from the [Exercism](https://exercism.org) TypeScript exercise, `ex-init` command will download the exercise, install the test dependencies, open VS Code with the exercise, test file and README, and make the `initial commit`.
-
-```bash
-ex-init exercism download --track=typescript --exercise=name-of-the-exercise
-```
-
-### Exercism Test
-
-This works basically as an `alias` for the `corepack yarn test` command, it's just faster to type.
-
-```bash
-ex-test
-```
-
-### Exercism Submit
-
-This is also silly, it's just so I don't have to type `exercism submit name-of-the-file.ts`. The command figures out the name of the file and submits it.
-
-```bash
-ex-submit
-```
-
 ## Setup
 
 Each tool lives in its own folder with its own `package.json`. To install one globally:
@@ -72,6 +28,92 @@ Each tool lives in its own folder with its own `package.json`. To install one gl
 ```bash
 cd psudo-tools/<tool-name>
 bun link
+```
+
+## Tools
+
+### Frontend Mentor
+
+[Frontend Mentor](https://www.frontendmentor.io) is a great platform to keep studying and practicing front-end development, letting you focus on the code itself without worrying about design or UI. It offers a wide variety of projects, from challenges that only require HTML and CSS to full-stack builds.
+
+- [Frontend Mentor Repository](https://github.com/psudo-dev/frontend-mentor)
+
+#### Frontend Mentor Setup
+
+Sets up a new [Frontend Mentor](https://www.frontendmentor.io) challenge. `frontend-mentor_-_project-name` is the naming convention for the folder/repository, and the command will:
+
+- set up `Bun`, `Vite` and `TypeScript`
+- install dependencies
+- create folders and move `.md` files
+- edit and write `tsconfig.json`, `vite.config.ts`, `package.json` and `.prettierignore`
+- create `index.css`, `reset.css`, `utilities.css` and `variables.css` with Color Variables extracted from the `style-guide.md`
+- clean up `index.html`, link `index.css` and `index.ts` files
+- create `README.md` with the challenge description and badges
+- format all files with `prettier` and `beautify`
+- run `git` commands
+
+```bash
+cd <project-folder>
+fm-init <challenge-difficulty> <challenge-page-url>
+```
+
+#### Frontend Mentor Update
+
+Each Frontend Mentor project has its own repository and I keep them all organized under the [`frontend-mentor`](https://github.com/psudo-dev/frontend-mentor) repository. This tool updates the `frontend-mentor/README.md` file with the latest project badges and links it to the project repository.
+
+```bash
+cd <project-folder>
+fm-update
+```
+
+### Exercism
+
+[Exercism](https://exercism.org) is a great platform to keep practicing coding fundamentals, good practices, and problem-solving, letting you focus on the logic itself through short, focused exercises.
+
+- [Exercism Repository](https://github.com/psudo-dev/exercism)
+
+#### Exercism Setup
+
+You copy & paste the command from the Exercism TypeScript exercise, `ex-init` command will download the exercise, install the test dependencies, open VS Code with the exercise, test file and README, and make the `initial commit`.
+
+```bash
+ex-init exercism download --track=typescript --exercise=name-of-the-exercise
+```
+
+#### Exercism Test
+
+This works basically as an `alias` for the `corepack yarn test` command, it's just faster to type.
+
+```bash
+cd <exercism/typescript/exercise-folder>
+ex-test
+```
+
+#### Exercism Submit
+
+This is also silly, it's just so I don't have to type `exercism submit name-of-the-file.ts`. The command figures out the name of the file and submits it.
+
+```bash
+cd <exercism/typescript/exercise-folder>
+ex-submit
+```
+
+#### Exercism Update
+
+```bash
+cd <exercism/typescript/exercise-folder>
+ex-update
+```
+
+### Codewars
+
+Codewars is a great platform to sharpen problem-solving skills through short coding challenges called katas, in a more gamified format that offers a different type of problem than what you typically deal with studying front-end development.
+
+#### Codewars Update
+
+```bash
+cd <codewars/kyu-folder/exercise-folder>
+cw-update
 ```
 
 ## License
