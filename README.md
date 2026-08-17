@@ -100,6 +100,8 @@ ex-submit
 
 #### Exercism Update
 
+`ex-update` will update the `README.md` file with the badge from the latest submission.
+
 ```bash
 cd <exercism/typescript/exercise-folder>
 ex-update
@@ -109,10 +111,14 @@ ex-update
 
 Codewars is a great platform to sharpen problem-solving skills through short coding challenges called katas, in a more gamified format that offers a different type of problem than what you typically deal with studying front-end development.
 
+- [Codewars Repository](https://github.com/psudo-dev/codewars-typescript)
+
 #### Codewars Update
 
+`cw-update` will update the `README.md` file with the badge from the latest exercise.
+
 ```bash
-cd <codewars/kyu-folder/exercise-folder>
+cd <codewars/n-kyu/exercise-folder>
 cw-update
 ```
 

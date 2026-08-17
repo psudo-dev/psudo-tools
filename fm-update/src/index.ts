@@ -13,4 +13,4 @@ appendProjectInfo(indexRepoPath, projectNameCapitalized);
 formatFile(indexRepoPath);
 gitCommands(indexRepoPath, projectNameLowerCase);
 
-console.log(`✅ frontend-mentor/README.md update completed!`);
+console.log(`✅ frontend-mentor/README.md update completed!\n`);
