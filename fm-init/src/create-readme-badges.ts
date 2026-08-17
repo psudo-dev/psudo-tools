@@ -103,18 +103,18 @@ const statePersistence: BadgeConfig = {
 	color: `${stackColors["api"]}`,
 };
 
-export const getFrontendMentorBadge = createBadge(frontendmentor);
-export const getHtml5Badge = createBadge(html5);
-export const getSemanticHtmlBadge = createBadge(semanticHtml);
-export const getDarkModeBadge = createBadge(darkMode);
-export const getAccessibilityBadge = createBadge(accessibility);
-export const getCssBadge = createBadge(css);
-export const getFluidCssBadge = createBadge(fluidCSS);
-export const getBemBadge = createBadge(bem);
-export const getCssAnimationBadge = createBadge(cssAnimation);
-export const getTailwindBadge = createBadge(tailwind);
-export const getTypescriptBadge = createBadge(typescript);
-export const getViteBadge = createBadge(vite);
-export const getBunBadge = createBadge(bun);
-export const getMockApiBadge = createBadge(mockApi);
-export const getStatePersistenceBadge = createBadge(statePersistence);
+export const frontendMentorBadge = createBadge(frontendmentor);
+export const html5Badge = createBadge(html5);
+export const semanticHtmlBadge = createBadge(semanticHtml);
+export const darkModeBadge = createBadge(darkMode);
+export const accessibilityBadge = createBadge(accessibility);
+export const cssBadge = createBadge(css);
+export const fluidCssBadge = createBadge(fluidCSS);
+export const bemBadge = createBadge(bem);
+export const cssAnimationBadge = createBadge(cssAnimation);
+export const tailwindBadge = createBadge(tailwind);
+export const typescriptBadge = createBadge(typescript);
+export const viteBadge = createBadge(vite);
+export const bunBadge = createBadge(bun);
+export const mockApiBadge = createBadge(mockApi);
+export const statePersistenceBadge = createBadge(statePersistence);

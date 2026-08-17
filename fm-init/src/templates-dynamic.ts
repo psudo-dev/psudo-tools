@@ -1,12 +1,12 @@
 import {
-	getAccessibilityBadge,
-	getBemBadge,
-	getBunBadge,
-	getFluidCssBadge,
-	getFrontendMentorBadge,
-	getSemanticHtmlBadge,
-	getTypescriptBadge,
-	getViteBadge,
+	accessibilityBadge,
+	bemBadge,
+	bunBadge,
+	fluidCssBadge,
+	frontendMentorBadge,
+	semanticHtmlBadge,
+	typescriptBadge,
+	viteBadge,
 } from "./create-readme-badges";
 import { projectNameCapitalized } from "./project-variables";
 import { getChallengeInstructions, getColorVariables } from "./write-utils";
@@ -31,7 +31,7 @@ export function getReadme(): string {
 
 # Frontend Mentor - ${projectNameCapitalized}
 
-${getFrontendMentorBadge} ${getSemanticHtmlBadge} ${getAccessibilityBadge} ${getFluidCssBadge} ${getBemBadge} ${getTypescriptBadge} ${getViteBadge} ${getBunBadge}
+${frontendMentorBadge} ${semanticHtmlBadge} ${accessibilityBadge} ${fluidCssBadge} ${bemBadge} ${typescriptBadge} ${viteBadge} ${bunBadge}
 
 ## Overview
 
