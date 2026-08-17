@@ -12,7 +12,7 @@ That's honestly how most of my personal projects go: I set out to fix one specif
 
 ## psudo-tools
 
-I get to learn more about Bun, Node.js, TypeScript, and CLI development in general. So far the tools are very specific to my needs, I thought about making them more generic and reusable to other people, but I don't know if the stripped down version would be so useful.
+It's a nice excuse to learn more about Bun, Node.js, TypeScript, and CLI development in general. So far the tools are very specific to my needs, I thought about making them more generic and reusable to other people, but I don't know if the stripped down version would be so useful.
 
 I don't know yet what any of this will grow into long-term — for now, it's just local packages solving my own problems. But who knows, eventually, I might end up making something worth publishing as a package so more people can benefit from it. For now, it's just a playground for me to learn and experiment.
 
