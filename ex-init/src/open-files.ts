@@ -1,11 +1,11 @@
-import fs from "fs";
+import fs from "node:fs";
 
 export function openFiles(exercisePath: string, exercise: string): void {
 	const files = fs.readdirSync(exercisePath);
 	const relevantFiles = files.filter((file) => file.includes(exercise));
 
 	if (relevantFiles.length === 0) {
-		console.error("\n❎ exercise and test files not found");
+		console.error("\n⚠️  exercise and test files not found");
 		process.exit(1);
 	}
 
@@ -19,7 +19,7 @@ export function openFiles(exercisePath: string, exercise: string): void {
 	);
 
 	if (openFiles.exitCode !== 0) {
-		console.error("\n❎ initial files failed to open on vscode");
+		console.error("\n⚠️  initial files failed to open on vscode");
 		process.exit(1);
 	}
 }

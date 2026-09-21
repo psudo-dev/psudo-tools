@@ -1,8 +1,8 @@
-import fs from "fs";
+import fs from "node:fs";
 
 export function getBadges(): string {
 	if (!fs.existsSync("./README.md")) {
-		console.error("\n❎ couldn't find README.md");
+		console.error("\n⚠️  couldn't find README.md");
 		process.exit(1);
 	}
 
@@ -17,7 +17,7 @@ export function getBadges(): string {
 
 	if (match) return `![${match[1].trim()}`;
 	else {
-		console.error("\n❎ couldn't find badges");
+		console.error("\n⚠️  couldn't find badges");
 		process.exit(1);
 	}
 }

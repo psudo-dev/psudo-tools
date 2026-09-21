@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "node:fs";
 import { indexTS } from "./templates-static";
 
 export function moveFiles(): void {
@@ -17,14 +17,6 @@ export function moveFiles(): void {
 			"./README-template.md",
 			"./.frontend-mentor/README-template.md",
 		);
-	}
-
-	if (fs.existsSync("./AGENTS.md")) {
-		fs.renameSync("./AGENTS.md", "./.frontend-mentor/AGENTS.md");
-	}
-
-	if (fs.existsSync("./CLAUDE.md")) {
-		fs.renameSync("./CLAUDE.md", "./.frontend-mentor/CLAUDE.md");
 	}
 
 	if (fs.existsSync("./style-guide.md")) {

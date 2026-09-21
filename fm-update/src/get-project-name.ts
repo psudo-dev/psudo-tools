@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import { capitalize } from "./utils";
 
 export function getProjectName(): {
@@ -8,7 +8,7 @@ export function getProjectName(): {
 	const processPath = path.basename(process.cwd());
 
 	if (!processPath.includes("frontend-mentor")) {
-		console.error("\n❎ incorrect folder");
+		console.error("\n⚠️  incorrect folder");
 		process.exit(1);
 	}
 

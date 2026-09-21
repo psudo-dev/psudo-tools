@@ -1,26 +1,32 @@
 #!/usr/bin/env bun
 
+import { formatFiles } from "./format-files";
 import { gitCommands } from "./git-commands";
 import { installDependencies } from "./install-dependencies";
-import { createFolders } from "./utils";
 import { moveFiles } from "./move-files";
+import { createFolders } from "./utils";
 import {
+	writeBiomeConfig,
 	writePackageJson,
-	writePrettierIgnore,
 	writeTsConfig,
 	writeViteConfig,
 } from "./write-config";
-import { writeCSS, writeIndexHtml, writeReadme } from "./write-files";
-import { formatFiles } from "./format-files";
+import {
+	writeAgentsMd,
+	writeCSS,
+	writeIndexHtml,
+	writeReadme,
+} from "./write-files";
 
 gitCommands("initial commit");
 installDependencies();
 createFolders();
 moveFiles();
 writeTsConfig();
+writeBiomeConfig();
 writeViteConfig();
 writePackageJson();
-writePrettierIgnore();
+writeAgentsMd();
 writeIndexHtml();
 writeCSS();
 writeReadme();

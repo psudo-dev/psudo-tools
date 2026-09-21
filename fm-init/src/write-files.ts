@@ -1,7 +1,15 @@
-import fs from "fs";
+import fs from "node:fs";
 import { getCssVariables, getReadme } from "./templates-dynamic";
 import { indexCSS, resetCSS, utilitiesCSS } from "./templates-static";
-import { editIndexHtml } from "./write-utils";
+import { editAgentsMd, editIndexHtml } from "./write-utils";
+
+export function writeAgentsMd(): void {
+	console.log("📝 rewriting AGENTS.md...");
+
+	const agents = editAgentsMd();
+
+	fs.writeFileSync("./AGENTS.md", agents);
+}
 
 export function writeReadme(): void {
 	console.log("📝 creating README.md...");

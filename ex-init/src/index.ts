@@ -1,11 +1,11 @@
 #!/usr/bin/env bun
 
-import path from "path";
-import { getExercismWorkspace } from "./get-workspace";
-import { getTrackExercise } from "./get-track-exercise";
+import path from "node:path";
 import { downloadExercise } from "./download-exercise";
-import { installTest } from "./install-test";
+import { getTrackExercise } from "./get-track-exercise";
+import { getExercismWorkspace } from "./get-workspace";
 import { gitCommands } from "./git-commands";
+import { installTest } from "./install-test";
 import { openFiles } from "./open-files";
 
 const exercismFolder = getExercismWorkspace();

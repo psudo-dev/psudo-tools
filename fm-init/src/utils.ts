@@ -1,7 +1,7 @@
+import fs from "node:fs";
 import path from "node:path";
-import fs from "fs";
-import { BadgeConfig, Difficulty, Stack } from "./types";
 import { difficulties, folders, stacks } from "./constants";
+import type { BadgeConfig, Difficulty, Stack } from "./types";
 
 export function capitalize(word: string): string {
 	return word.charAt(0).toUpperCase() + word.slice(1);
@@ -36,7 +36,7 @@ export function getProjectName(): {
 	const folderName = path.basename(process.cwd());
 
 	if (!folderName.includes("frontend-mentor")) {
-		console.error("\n❎ incorrect folder");
+		console.error("\n⚠️  incorrect folder");
 		process.exit(1);
 	}
 
@@ -64,7 +64,7 @@ export function getArgs(): {
 	}
 
 	if (!isDifficulty(difficulty) || !projectUrl) {
-		console.error("\n❎ difficulty level and project url are required");
+		console.error("\n⚠️  difficulty level and project url are required");
 		process.exit(1);
 	}
 
@@ -74,5 +74,7 @@ export function getArgs(): {
 export function createFolders() {
 	console.log("\n📂 creating folders...");
 
-	folders.forEach((folder) => fs.mkdirSync(`./${folder}`));
+	folders.forEach((folder) => {
+		fs.mkdirSync(`./${folder}`);
+	});
 }

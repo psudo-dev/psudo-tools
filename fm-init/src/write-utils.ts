@@ -1,9 +1,9 @@
-import fs from "fs";
+import fs from "node:fs";
 import { footerHtml, linkCSSToHtml } from "./templates-static";
 
 export function getChallengeInstructions(): string {
 	if (!fs.existsSync("./.frontend-mentor/README.md")) {
-		console.error("\n❎ couldn't find /.frontend-mentor/README.md");
+		console.error("\n⚠️  couldn't find /.frontend-mentor/README.md");
 		process.exit(1);
 	}
 
@@ -17,7 +17,7 @@ export function getChallengeInstructions(): string {
 
 function getStyleGuide(): string {
 	if (!fs.existsSync("./.frontend-mentor/style-guide.md")) {
-		console.error("\n❎ couldn't find /.frontend-mentor/style-guide.md");
+		console.error("\n⚠️  couldn't find /.frontend-mentor/style-guide.md");
 		process.exit(1);
 	}
 
@@ -48,7 +48,7 @@ export function getColorVariables(): string {
 
 function getIndexHtml(): string {
 	if (!fs.existsSync("./index.html")) {
-		console.error("\n❎ couldn't find index.html");
+		console.error("\n⚠️  couldn't find index.html");
 		process.exit(1);
 	}
 
@@ -72,4 +72,36 @@ export function editIndexHtml(): string {
 	const indexFinal = indexWithoutStyle.replace(footerRegexp, footerHtml);
 
 	return indexFinal;
+}
+
+function getAgentsMd(): string {
+	if (!fs.existsSync("./AGENTS.md")) {
+		console.error("\n⚠️  couldn't find AGENTS.md");
+		process.exit(1);
+	}
+
+	return fs.readFileSync("./AGENTS.md", "utf-8");
+}
+
+export function editAgentsMd(): string {
+	const AgentsMd = getAgentsMd();
+
+	const frontendRegexp =
+		/Frontend-Specific Focus Areas[\s\S]*?(?=(?:\n##\s[\s\S])|$)/;
+
+	console.log(
+		`AGENTS.md: getting "## Frontend-Specific Focus Areas" section's content...`,
+	);
+	const instructions = AgentsMd.match(frontendRegexp)?.[0];
+
+	if (!instructions) {
+		console.error(
+			`\n⚠️  couldn't find "## Frontend-Specific Focus Areas" section in AGENTS.md`,
+		);
+		process.exit(1);
+	} else {
+		console.log(`AGENTS.md: consolidanting relevant content...`);
+		const formatted = `## ${instructions}`;
+		return formatted;
+	}
 }

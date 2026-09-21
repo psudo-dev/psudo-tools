@@ -1,13 +1,13 @@
 #!/usr/bin/env bun
 
-import path from "path";
-import fs from "fs";
+import fs from "node:fs";
+import path from "node:path";
 
 const folderName = path.basename(process.cwd());
 const exerciseFile = `${folderName}.ts`;
 
 if (!fs.existsSync(`./${exerciseFile}`)) {
-	console.error(`\n❎ ${exerciseFile} file not found`);
+	console.error(`\n⚠️  ${exerciseFile} file not found`);
 	process.exit(1);
 }
 
@@ -24,7 +24,7 @@ const submit = Bun.spawnSync(["exercism", "submit", exerciseFile], {
 });
 
 if (submit.exitCode !== 0) {
-	console.error("\n❎ submission has failed!");
+	console.error("\n⚠️  submission has failed!");
 	process.exit(1);
 }
 

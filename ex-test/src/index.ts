@@ -1,13 +1,13 @@
 #!/usr/bin/env bun
 
-import path from "path";
-import fs from "fs";
+import fs from "node:fs";
+import path from "node:path";
 
 const folderName = path.basename(process.cwd());
 const exerciseFile = `${folderName}.ts`;
 
 if (!fs.existsSync(`./${exerciseFile}`)) {
-	console.error(`\n❎ ${exerciseFile} file not found`);
+	console.error(`\n⚠️  ${exerciseFile} file not found`);
 	process.exit(1);
 }
 
@@ -18,7 +18,7 @@ const test = Bun.spawnSync(["corepack", "yarn", "test"], {
 });
 
 if (test.exitCode !== 0) {
-	console.error("\n❎ test command has failed!");
+	console.error("\n⚠️  test command has failed!");
 	process.exit(1);
 }
 

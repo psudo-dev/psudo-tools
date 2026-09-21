@@ -1,5 +1,5 @@
-import path from "path";
-import fs from "fs";
+import fs from "node:fs";
+import path from "node:path";
 
 export function updateReadme(
 	codewarsPath: string,
@@ -9,7 +9,7 @@ export function updateReadme(
 	const readmePath = path.join(codewarsPath, "README.md");
 
 	if (!fs.existsSync(readmePath)) {
-		console.error(`\n❎ couldn't find README.md`);
+		console.error(`\n⚠️  couldn't find README.md`);
 		process.exit(1);
 	}
 

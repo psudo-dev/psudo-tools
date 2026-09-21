@@ -1,5 +1,5 @@
-import path from "path";
-import fs from "fs";
+import fs from "node:fs";
+import path from "node:path";
 import { getBadges } from "./get-badges";
 import { getRepositoryUrl } from "./get-repository-url";
 
@@ -12,7 +12,7 @@ export function appendProjectInfo(
 	const indexRepoReadmePath = path.join(indexRepoPath, "README.md");
 
 	if (!fs.existsSync(indexRepoReadmePath)) {
-		console.error(`\n❎ couldn't find frontend-mentor/README.md`);
+		console.error(`\n⚠️  couldn't find frontend-mentor/README.md`);
 		process.exit(1);
 	}
 

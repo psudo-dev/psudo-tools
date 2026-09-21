@@ -1,13 +1,8 @@
 export function getRepositoryUrl(): string {
-	const result = Bun.spawnSync([
-		"git",
-		"config",
-		"--get",
-		"remote.origin.url",
-	]);
+	const result = Bun.spawnSync(["git", "config", "--get", "remote.origin.url"]);
 
 	if (result.exitCode !== 0) {
-		console.error("\n❎ couldn't get git remote url");
+		console.error("\n⚠️  couldn't get git remote url");
 		process.exit(1);
 	}
 

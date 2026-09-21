@@ -7,7 +7,7 @@ export function gitCommands(message: string): void {
 	});
 
 	if (gitAdd.exitCode !== 0) {
-		console.error("\n❎ git add has failed");
+		console.error("\n⚠️  git add has failed");
 		process.exit(1);
 	}
 
@@ -17,7 +17,7 @@ export function gitCommands(message: string): void {
 	);
 
 	if (gitCommit.exitCode !== 0) {
-		console.error("\n❎ git commit has failed");
+		console.error("\n⚠️  git commit has failed");
 		process.exit(1);
 	}
 
@@ -26,7 +26,7 @@ export function gitCommands(message: string): void {
 	});
 
 	if (gitPush.exitCode !== 0) {
-		console.error("\n❎ git push has failed");
+		console.error("\n⚠️  git push has failed");
 		process.exit(1);
 	}
 }

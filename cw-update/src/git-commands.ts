@@ -11,17 +11,12 @@ export function gitCommands(
 	});
 
 	if (gitAdd.exitCode !== 0) {
-		console.error("\n❎ git add has failed");
+		console.error("\n⚠️  git add has failed");
 		process.exit(1);
 	}
 
 	const gitCommit = Bun.spawnSync(
-		[
-			"git",
-			"commit",
-			"-m",
-			`README.md: added "${exerciseLowerCase}" badge`,
-		],
+		["git", "commit", "-m", `README.md: added "${exerciseLowerCase}" badge`],
 		{
 			cwd: codewarsPath,
 			stdio: ["inherit", "inherit", "inherit"],
@@ -29,7 +24,7 @@ export function gitCommands(
 	);
 
 	if (gitCommit.exitCode !== 0) {
-		console.error("\n❎ git commit has failed");
+		console.error("\n⚠️  git commit has failed");
 		process.exit(1);
 	}
 
@@ -39,7 +34,7 @@ export function gitCommands(
 	});
 
 	if (gitPush.exitCode !== 0) {
-		console.error("\n❎ git push has failed");
+		console.error("\n⚠️  git push has failed");
 		process.exit(1);
 	}
 }

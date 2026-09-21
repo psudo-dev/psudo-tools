@@ -1,4 +1,4 @@
-import { difficulties, stacks } from "./constants";
+import type { difficulties, stacks } from "./constants";
 
 export type Difficulty = (typeof difficulties)[number];
 

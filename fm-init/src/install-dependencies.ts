@@ -6,16 +6,19 @@ export function installDependencies(): void {
 	});
 
 	if (bunInit.exitCode !== 0) {
-		console.error("\n❎ bun init command failed");
+		console.error("\n⚠️  bun init command failed");
 		process.exit(1);
 	}
 
-	const bunAdd = Bun.spawnSync(["bun", "add", "-d", "vite", "typescript"], {
-		stdio: ["inherit", "inherit", "inherit"],
-	});
+	const bunAdd = Bun.spawnSync(
+		["bun", "add", "-d", "vite", "typescript", "@biomejs/biome", "prettier"],
+		{
+			stdio: ["inherit", "inherit", "inherit"],
+		},
+	);
 
 	if (bunAdd.exitCode !== 0) {
-		console.error("\n❎ dev dependencies installation failed");
+		console.error("\n⚠️  dev dependencies installation failed");
 		process.exit(1);
 	}
 }

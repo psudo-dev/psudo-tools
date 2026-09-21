@@ -1,9 +1,9 @@
 #!/usr/bin/env bun
 
+import { appendProjectInfo } from "./append-project-info";
+import { getIndexRepository } from "./get-index-repository";
 import { getProjectName } from "./get-project-name";
 import { gitCommands } from "./git-commands";
-import { getIndexRepository } from "./get-index-repository";
-import { appendProjectInfo } from "./append-project-info";
 import { formatFile } from "./utils";
 
 const { projectNameLowerCase, projectNameCapitalized } = getProjectName();

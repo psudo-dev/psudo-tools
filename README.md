@@ -42,14 +42,14 @@ bun link
 
 Sets up a new [Frontend Mentor](https://www.frontendmentor.io) challenge. `frontend-mentor_-_project-name` is the naming convention for the folder/repository, and the command will:
 
-- set up `Bun`, `Vite` and `TypeScript`
+- set up `Bun`, `Vite`, `TypeScript`, `Biome` and `Prettier`
 - install dependencies
 - create folders and move `.md` files
-- edit and write `tsconfig.json`, `vite.config.ts`, `package.json` and `.prettierignore`
+- edit and write `tsconfig.json`, `vite.config.ts`, `package.json`, `biome.json` and `AGENTS.md`
 - create `index.css`, `reset.css`, `utilities.css` and `variables.css` with Color Variables extracted from the `style-guide.md`
 - clean up `index.html`, link `index.css` and `index.ts` files
 - create `README.md` with the challenge description and badges
-- format all files with `prettier` and `beautify`
+- run `biome migrate` to update the base `biome.json` files and format all files
 - run `git` commands
 
 ```bash

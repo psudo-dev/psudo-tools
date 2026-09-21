@@ -17,6 +17,41 @@ export const tsconfig = `
 }
 `;
 
+export const biomeConfig = `
+{
+	"$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"linter": {
+		"rules": {
+			"complexity": {
+				"noImportantStyles": "off"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteProperties": "preserve"
+		}
+	},
+	"html": {
+		"formatter": {
+			"enabled": true
+		}
+	}
+}
+`;
+
 export const viteConfig = `
 import { defineConfig } from "vite";
 
@@ -24,6 +59,10 @@ export default defineConfig({});
 `;
 
 export const packageScripts = {
+	biome: "biome migrate --write",
+	lint: "biome lint --write .",
+	format: `biome format --write . && prettier --write "**/*.md"`,
+	check: "biome check --write .",
 	gitreset: "git reset --hard && git clean -fd",
 	dev: "vite",
 	build: "vite build",

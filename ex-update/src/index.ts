@@ -1,9 +1,9 @@
 #!/usr/bin/env bun
 
-import { formatFile, getNames, getPath } from "./utils";
 import { createBadge } from "./create-badge";
-import { updateReadme } from "./update-readme";
 import { gitCommands } from "./git-commands";
+import { updateReadme } from "./update-readme";
+import { formatFile, getNames, getPath } from "./utils";
 
 const { exerciseFolderName, exerciseCapitalized } = getNames();
 const exercismPath = getPath();

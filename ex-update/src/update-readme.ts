@@ -1,16 +1,16 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 export function updateReadme(
 	exercismPath: string,
 	exerciseBadge: string,
 ): void {
-	const regexp = /\[!\[Exercism[\s\S]+\(.\/typescript[\w-\/]+README.md\)/;
+	const regexp = /\[!\[Exercism[\s\S]+\(.\/typescript[\w-/]+README.md\)/;
 
 	const readmePath = path.join(exercismPath, "README.md");
 
 	if (!fs.existsSync(readmePath)) {
-		console.error(`\n❎ couldn't find README.md`);
+		console.error(`\n⚠️  couldn't find README.md`);
 		process.exit(1);
 	}
 

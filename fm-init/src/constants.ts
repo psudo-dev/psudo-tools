@@ -1,4 +1,4 @@
-import { Difficulty, Stack } from "./types";
+import type { Difficulty, Stack } from "./types";
 
 export const folders = ["public", "src", "css", ".frontend-mentor"];
 

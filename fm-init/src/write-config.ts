@@ -1,10 +1,21 @@
-import fs from "fs";
-import { packageScripts, tsconfig, viteConfig } from "./templates-static";
+import fs from "node:fs";
+import {
+	biomeConfig,
+	packageScripts,
+	tsconfig,
+	viteConfig,
+} from "./templates-static";
 
 export function writeTsConfig(): void {
 	console.log("✏️  rewriting tsconfig.json...");
 
 	fs.writeFileSync("./tsconfig.json", tsconfig);
+}
+
+export function writeBiomeConfig(): void {
+	console.log("✏️  creating biome.json...");
+
+	fs.writeFileSync("./biome.json", biomeConfig);
 }
 
 export function writeViteConfig(): void {
@@ -15,7 +26,7 @@ export function writeViteConfig(): void {
 
 export function writePackageJson(): void {
 	if (!fs.existsSync("./package.json")) {
-		console.error("\n❎ couldn't find package.json");
+		console.error("\n⚠️  couldn't find package.json");
 		process.exit(1);
 	}
 
@@ -28,9 +39,4 @@ export function writePackageJson(): void {
 	console.log("✏️  adding scripts to package.json...");
 
 	fs.writeFileSync("./package.json", packageStringified);
-}
-
-export function writePrettierIgnore(): void {
-	console.log("📝 creating .prettierignore...");
-	fs.writeFileSync("./.prettierignore", "*.html\n");
 }
